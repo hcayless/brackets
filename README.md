@@ -11,5 +11,13 @@ I'd add a couple more infrastructural requirements:
 
 5. Ideally, no server-side processing should be required. At least it should be kept to a minimum.
 6. It should be reasonably easy to deploy (i.e. you don't have to be an expert coder to get it going).
+7. It should be as low-maintenance as possible.
 
-This seems likely to turn into a multi-part series of mini-essays, hopefully one that will gradually add bits of working code, and maybe even a functioning editor. A few years ago, I was involved in a similar effort led by people at MITH (which ultimately failed). It was called "Angles", so I'm tentatively calling this thing "Brackets".
+This seems likely to turn into a multi-part series of mini-essays, hopefully one that will gradually add bits of working code, and maybe even a functioning editor. A few years ago, I was involved in a similar effort led by people at MITH (which ultimately failed). It was called "[Angles](https://securegrants.neh.gov/publicquery/Download.aspx?data=EbwGdSyLkD7zoB3W75cvd%2bXST%2bWypC%2blxN287EYCLJwL%2fBHyeaDHU3RDLrfbJLx%2b1ItCBTsjaJWE63FMYJfoM3kRWI6WIx3tbxFY0YxJWCyrSmv4VZBvmZMmZD6Yx6Oo%2fKNMeiAmM31gZyGwdni6YQ%3d%3d)", so I'm tentatively calling this thing "Brackets".
+
+I have the following topics in mind, and they will get filled in as I get to them. No promises about having a completed TEI editor here, or even a complete set of posts, but I'll do what I can.
+
+* [Schemas and validation](validation.md)
+* Why not a tagless editor?
+* Multilingual support
+* Web vs. desktop
