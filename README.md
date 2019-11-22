@@ -12,4 +12,4 @@ I'd add a couple more infrastructural requirements:
 5. Ideally, no server-side processing should be required. At least it should be kept to a minimum.
 6. It should be reasonably easy to deploy (i.e. you don't have to be an expert coder to get it going).
 
-This seems likely to turn into a multi-part series of mini-essays, hopefully one that will gradually add bits of working code, and maybe even a functioning editor. A few years ago, I was involved in a similar effort led by people at MITH (which ultimately failed). It was called "Angles", so I'm tetatively calling this thing "Brackets".
+This seems likely to turn into a multi-part series of mini-essays, hopefully one that will gradually add bits of working code, and maybe even a functioning editor. A few years ago, I was involved in a similar effort led by people at MITH (which ultimately failed). It was called "Angles", so I'm tentatively calling this thing "Brackets".
