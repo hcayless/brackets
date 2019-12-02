@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/codemirror.css">
+  <style>
+    .valid {
+      background-color: green;
+    }
+    .invalid {
+      background-color: red;
+    }
+    div#codemirror {
+      height: 90vh;
+    }
+    .CodeMirror {
+      height: 100%;
+    }
+  </style>
+  <script src="js/codemirror.js"></script>
+  <script src="js/xml/xml.js"></script>
+  <script src="js/xmllint.js"></script>
+  <title>XML.js Test</title>
+</head>
+<body>
+  <div id="status">
+
+      <button onclick="validate()">validate</button>
+
+    <ul></ul>
+  </div>
+  <div id="codemirror"></div>
+  <script>
+      var schema;
+      // Get the source document and put it into the editor
+      var requestDoc = new XMLHttpRequest();
+      requestDoc.addEventListener("load", function() {
+        cm.setValue(this.responseText);
+      })
+      requestDoc.open("GET", "https://raw.githubusercontent.com/DigitalLatin/Calpurnius_Siculus/master/editio.xml");
+      requestDoc.send();
+      var requestSchema = new XMLHttpRequest();
+      requestSchema.addEventListener("load", function() {
+        schema = this.responseText;
+      })
+      // Get the schema
+      requestSchema.open("GET", "https://digitallatin.github.io/guidelines/critical-editions.rng");
+      //requestSchema.open("GET", "https://tei-c.org/Vault/P5/3.6.0/xml/tei/custom/schema/relaxng/tei_all.rng");
+      requestSchema.send();
+      // Load up the editor
+      var cm = CodeMirror(document.getElementById("codemirror"), {
+        mode: "application/xml",
+        lineNumbers: true
+      });
+      // Function to call xmllint and return the errors, if any
+      var checkErrors = function() {
+        return xmllint.validateXML({
+          xml: cm.getValue(),
+          schema: schema,
+          format: "rng"
+        }).errors;
+      }
+      // Function to do the validation and show the results
+      var validate = function() {
+        var errors = checkErrors();
+        if (!errors) {
+          document.querySelector("#status button").setAttribute("class", "valid");
+        } else {
+          document.querySelector("#status button").setAttribute("class", "invalid");
+          var errorList = document.querySelector("#status ul");
+          errorList.innerHTML = "";
+          for (var i = 0; i < errors.length; i++) {
+            var err = document.createElement("li");
+            err.innerText = errors[i];
+            errorList.appendChild(err);
+          }
+        }
+      }
+    </script>
+</body>
+</html>

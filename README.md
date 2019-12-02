@@ -17,7 +17,10 @@ This seems likely to turn into a multi-part series of mini-essays, hopefully one
 
 I have the following topics in mind, and they will get filled in as I get to them. No promises about having a completed TEI editor here, or even a complete set of posts, but I'll do what I can.
 
-* [Schemas and validation](validation.md)
+* Schemas and validation
+  * [Part 1](validation.md)
+  * [Part 2](validation-2.md)
+  * [Experiment 1](experiment_1.md)
 * Why not a tagless editor?
 * Multilingual support
 * Web vs. desktop

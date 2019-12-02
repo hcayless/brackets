@@ -109,4 +109,4 @@ Before we go diving into writing our own validator, it's worth taking a look aro
 
 To conclude this episode: there may be a way forward towards validating TEI documents in our still theoretical editor, and if it doesn't work, I might have some useful thoughts on building a sufficient validator. Note that the ported libxml2 solution doesn't help us with providing schema-aware help to our users, and it won't help us with Schematron at all. It might fail to handle documents with alphabets outside the [ASCII](https://en.wikipedia.org/wiki/ASCII) range, or outside the Unicode [Basic Multilingual Plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane). It might take a Gigabyte of memory to run. It might make your laptop hot enough to cook an egg on. We shall see. 
 
-To be continued...
+[Experiment: is the JavaScript port of libxml2 viable?](experiment_1.md)
