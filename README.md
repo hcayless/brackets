@@ -21,6 +21,6 @@ I have the following topics in mind, and they will get filled in as I get to the
   * [Part 1](validation.md)
   * [Part 2](validation-2.md)
   * [Experiment 1](experiment_1.md)
-* Why not a tagless editor?
+* [Why not a tagless editor?](tagless.md)
 * Multilingual support
 * Web vs. desktop
