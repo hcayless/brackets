@@ -2,7 +2,7 @@
 
 I want to go on a bit of a digression here to try to justify my feeling that a "code" editor is the best starting place. This seems counter to many people's instincts. TEI is complicated, so why can't we use technology to make editing it simpler? My argument against this position goes like this:
 
-1. Technology usually can't make *anything* simpler, although it can often amke tasks easier. You can hide complexity or move it somewhere else.
+1. Technology usually can't make *anything* simpler, although it can often make tasks easier. You can hide complexity or move it somewhere else.
 2. Texts are fiendishly complex, multifacted, multivalent things. Why would you expect something that can model texts to be simple?
 3. We *can* build simpler, "tagless" editors, but only in cases where we know up front what we want the outcome to look like. That is, we can do this for specific cases, but not for the general case, not without broad acceptance of a general model for text anyway.
 
